@@ -1,3 +1,22 @@
+= Forked repository of sshj
+
+This is a repository forked from the main repository at https://github.com/hierynomus/sshj
+
+It exists so that I can get a build containing ProxyCommand support ( https://github.com/hierynomus/sshj/pull/971 ) which has not yet been merged into the upstream project.
+
+The maven co-ordinates for this fork are:
+
+[source,xml,subs="verbatim,attributes"]
+----
+<dependency>
+  <groupId>com.randomnoun.sshj</groupId>
+  <artifactId>sshj</artifactId>
+  <version>0.39.0-randomnoun-1</version>
+</dependency>
+----
+
+Original README contents:
+
 = sshj - SSHv2 library for Java
 Jeroen van Erp
 :sshj_groupid: com.hierynomus
