@@ -13,7 +13,7 @@ plugins {
   id "io.github.gradle-nexus.publish-plugin" version "1.3.0"
 }
 
-group = "com.hierynomus"
+group = "com.randomnoun.sshj"
 ext.moduleName = "${project.group}.${project.name}"
 
 defaultTasks "build"
@@ -33,7 +33,8 @@ scmVersion {
   }
 }
 
-project.version = scmVersion.version
+// project.version = scmVersion.version
+project.version = '0.39.0-SNAPSHOT'
 
 compileJava {
   options.release = 8
@@ -255,22 +256,28 @@ project.plugins.withType(MavenPublishPlugin).all {
 					id = "shikhar"
 					name = "Shikhar Bhushan"
 					email = "shikhar@schmizz.net"
-          url = "http://schmizz.net"
-          roles = ["Previous Lead developer"]
+                    url = "http://schmizz.net"
+                    roles = ["Previous Lead developer"]
 				}
-        developer {
-          id = "iterate"
-          name = "David Kocher"
-          email = "dkocher@iterate.ch"
-          organization = "iterate GmbH"
-          organizationUrl = "https://iterate.ch"
-          roles = ["Developer"]
-        }
-			}
+                developer {
+                  id = "iterate"
+                  name = "David Kocher"
+                  email = "dkocher@iterate.ch"
+                  organization = "iterate GmbH"
+                  organizationUrl = "https://iterate.ch"
+                  roles = ["Developer"]
+                }
+                developer {
+                  id = "knoxg"
+                  name = "Greg Knox"
+                  email = "knoxg@randomnoun.com"
+                  roles = ["Fork developer (ProcessProxy support)"]
+                }
+		}
       scm {
-        url = "https://github.com/hierynomus/${project.name}"
-        connection = "scm:git@github.com:hierynomus/${project.name}.git"
-        developerConnection = "scm:git@github.com:hierynomus/${project.name}.git"
+        url = "https://gitlab.dev.randomnoun/thirdparty/sshj"
+        connection = "scm:git:http://gitlab.dev.randomnoun/thirdparty/sshj.git"
+        developerConnection = "scm:git:http://gitlab.dev.randomnoun/thirdparty/sshj.git"
       }
 		}
 	}
