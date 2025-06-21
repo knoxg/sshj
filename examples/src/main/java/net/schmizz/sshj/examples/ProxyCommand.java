@@ -12,6 +12,7 @@ import net.schmizz.sshj.transport.verification.PromiscuousVerifier;
 
 /**
  * This example uses a separate process to handle I/O, similar to the "ProxyCommand" directive in openssh.
+ * 
  */
 public class ProxyCommand {
     public static void main(String... args)
